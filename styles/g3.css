@@ -241,6 +241,21 @@ main > section {
         filter: grayscale(100%);
 
 }
+
+footer{
+       background-color: #FFF4E7;
+       max-width: 1400px;
+       margin: 216px auto;
+       border-radius: 8px;
+
+}
+.footer{
+        max-width: 620px;
+        padding: 39px 410px;
+        font-size: 1.rem;
+        font-weight: 600;
+        text-align: center;
+}
 /* responsive media query*/
 /*navbar*/
 @media screen and (max-width:576px) {
@@ -270,6 +285,14 @@ main > section {
               margin-top: 20px;
               margin-right: 20px;
               margin-left: 20px;
+      }
+
+      footer{
+           display: flex;
+           flex-direction:column;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
       }
     }
 
