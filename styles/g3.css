@@ -143,6 +143,61 @@ main > section {
            grid-template-columns: repeat(2, 1fr);
            gap: 24px;
 }
+
+/*some facts related styles*/
+.facts-container{
+       display: grid;
+       grid-template-columns: repeat(4, 1fr);
+       gap: 124px;
+       margin-top: 100px;
+
+}
+.fact-card{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+       border: 1px solid #FF900E;
+       width: 240px;
+       height: 240px;
+       border-radius: 8px;
+}
+
+.fact-number{
+     font-size: 2.8rem;
+     font-weight: 600;
+     margin-top: 10px;
+     margin-bottom: 5px;
+     color: #424242;
+}
+
+.fact-name{
+       font-size: 1.25rem;
+       font-weight: 600;
+       margin: 10px;
+       color: #727272;
+}
+
+.text-description{
+        max-width: 540px;
+}
+
+/*sponsor related styles*/
+.sponsor-info{
+       max-width: 540px;
+       margin: 50px auto;
+       text-align: center;
+}
+.sponsor-companies{
+       display: grid;
+       grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsor-companies img{
+        
+        filter: grayscale(100%);
+
+}
 /* responsive media query*/
 /*navbar*/
 @media screen and (max-width:576px) {
@@ -150,10 +205,20 @@ main > section {
           flex-direction: column;
       }
 
-      .team-img-container{
+      .team-img-container, .facts-container,.sponsor-companies{
           grid-template-columns: repeat(1, 1fr);
       }
       
+      .facts-container,.sponsor-companies{
+             justify-items: center;
+             gap: 24px; 
+      }
+
+     
+
+       .fact{
+             margin-left: 15px;
+       }
       .our-features{
          margin-left: 20px;
       }
@@ -168,5 +233,15 @@ main > section {
 
           .our-features{
               margin: 50px auto;
+          }
+          .sponsor-companies,.facts-container{
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+                justify-items: center;
+          }
+
+          .fact{
+             text-align: center;
+             margin: 10px auto;
           }
     }
